@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#071516">
+    <meta name="description" content="Agentic Commerce Gateway is the authorization, policy, and evidence layer for trusted agent payments.">
+    <meta property="og:title" content="Agentic Commerce Gateway">
+    <meta property="og:description" content="Let agents buy. Keep enterprises in control.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pranavdharwadkar.github.io/agentic-commerce-control-point/">
+    <link rel="canonical" href="https://pranavdharwadkar.github.io/agentic-commerce-control-point/">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Agentic Commerce Gateway</title>
+  </head>
+  <body>
+    <nav class="public-nav">
+      <a class="public-brand" href="#top"><span class="mark">AC</span><span><strong>Agentic Commerce Gateway</strong><small>TRUST INFRASTRUCTURE FOR AGENT PAYMENTS</small></span></a>
+      <div><a href="#problem">Problem</a><a href="#architecture">Architecture</a><a href="#control-plane">Control plane</a><a class="nav-cta" href="https://agentic-commerce-control-plane.onrender.com/control-plane">Open live sandbox →</a></div>
+    </nav>
+
+    <main id="top">
+      <section class="public-hero">
+        <div class="hero-grid"></div><div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+        <div class="public-hero-copy">
+          <span class="public-kicker"><i></i> AGENTIC COMMERCE, CONTROLLED</span>
+          <h1>Let agents buy.<br><em>Keep enterprises in control.</em></h1>
+          <p>Agentic Commerce Gateway is the independent authorization, policy and evidence layer between AI agents, gateways, merchants and payment processors.</p>
+          <div class="hero-actions"><a class="button-primary" href="https://agentic-commerce-control-plane.onrender.com/control-plane">View the control plane →</a><a class="button-secondary" href="#architecture">See how it works ↓</a></div>
+          <div class="protocol-line"><span>A2A</span><span>MCP</span><b>AP2</b><b>MPP</b><b>x402</b></div>
+        </div>
+        <div class="public-hero-proof">
+          <div class="proof-window">
+            <div class="window-bar"><span>LIVE SANDBOX TRACE</span><i></i><i></i><i></i></div>
+            <div class="mini-trace">
+              <div><span class="trace-node">1</span><p><small>CLIENT AGENT</small><strong>acg-sandbox-buyer</strong></p><em>✓ authenticated</em></div>
+              <div><span class="trace-node">2</span><p><small>LITELLM</small><strong>Signed buyer identity assertion</strong></p><em>✓ passed</em></div>
+              <div><span class="trace-node">3</span><p><small>ACG</small><strong>AP2 mandate + deterministic policy</strong></p><em>✓ allow</em></div>
+              <div><span class="trace-node">4</span><p><small>STRIPE</small><strong>pi_•••95A7 · $1.00 test</strong></p><em>✓ succeeded</em></div>
+              <div><span class="trace-node">5</span><p><small>TINKRA MERCHANT</small><strong>tinkra-test-•••32a2</strong></p><em>✓ accepted</em></div>
+            </div>
+          </div>
+          <span class="hero-caption">One correlated record from agent identity to merchant order.</span>
+        </div>
+      </section>
+
+      <section class="trust-bar"><span>BUILT FOR THE SPACE BETWEEN</span><strong>Agents</strong><i>×</i><strong>AI gateways</strong><i>×</i><strong>Mandates</strong><i>×</i><strong>Payments</strong><i>×</i><strong>Merchants</strong></section>
+
+      <section class="public-section problem" id="problem">
+        <div class="section-label">01 / THE BUSINESS NEED</div>
+        <div class="problem-title"><span class="eyebrow">THE CONTROL GAP</span><h2>AI agents can act at machine speed.<br>Enterprise controls still move at human speed.</h2></div>
+        <div class="challenge-grid">
+          <article><span>01</span><h3>Authorization is fragmented</h3><p>Agent identity, user intent and payment approval live in separate systems. Merchants cannot reliably tell what an agent was allowed to buy.</p></article>
+          <article><span>02</span><h3>Gateways lack commerce context</h3><p>AI gateways route model and tool traffic, but they do not enforce price, payee, currency, delegation or transaction-specific mandates.</p></article>
+          <article><span>03</span><h3>Evidence breaks at handoffs</h3><p>Teams cannot follow one transaction across the agent, AI gateway, payment processor, merchant order and fulfillment lifecycle.</p></article>
+        </div>
+      </section>
+
+      <section class="public-section solution">
+        <div class="section-label light">02 / THE SOLUTION</div>
+        <div class="solution-copy">
+          <span class="eyebrow">A NEUTRAL ENFORCEMENT LAYER</span>
+          <h2>One gateway for trusted<br><em>agentic transactions.</em></h2>
+          <p>ACG sits beside the AI gateway—not inside the merchant storefront. It validates agent identity and commerce mandates, applies deterministic enterprise policy, coordinates payment and order execution, and writes linked evidence for every decision.</p>
+          <div class="solution-points"><div><b>01</b><span><strong>Verify</strong>Identity, issuer, delegation and mandate</span></div><div><b>02</b><span><strong>Enforce</strong>Merchant, amount, currency and route policy</span></div><div><b>03</b><span><strong>Trace</strong>Decision, payment, order and fulfillment</span></div></div>
+        </div>
+        <div class="policy-card"><div class="policy-head"><span>POLICY DECISION</span><b>ALLOW</b></div><code><span>agent</span> acg-sandbox-buyer<br><span>merchant</span> tinkra-agent-atelier<br><span>protocol</span> AP2<br><span>amount</span> USD 1.00<br><span>mandate</span> signature verified<br><span>replay</span> no prior claim</code><div class="policy-foot"><i></i> Evidence linked end to end</div></div>
+      </section>
+
+      <section class="public-section architecture" id="architecture">
+        <div class="section-label">03 / SOLUTION ARCHITECTURE</div>
+        <div class="architecture-head"><div><span class="eyebrow">MERCHANT-AGNOSTIC BY DESIGN</span><h2>Commerce control without<br>locking into one AI gateway.</h2></div><p>Thin host adapters connect A2A and MCP traffic to a shared commerce core. Deterministic policy—not an LLM response—is the final authority for payment execution.</p></div>
+        <div class="architecture-flow">
+          <article><span>01</span><div class="arch-icon">A</div><h3>Client agent</h3><p>Enterprise, personal or developer agent initiates an authorized purchase.</p></article><div class="flow-arrow">→</div>
+          <article><span>02</span><div class="arch-icon">G</div><h3>AI gateway</h3><p>LiteLLM today; ServiceNow ACT, Kong and others through thin adapters.</p></article><div class="flow-arrow">→</div>
+          <article><span>03</span><div class="arch-icon">AC</div><h3>ACG trust layer</h3><p>Identity binding, mandate verification, deterministic policy and replay protection.</p></article><div class="flow-arrow">→</div>
+          <article><span>04</span><div class="arch-icon">$</div><h3>Commerce systems</h3><p>Merchant order creation, payment processing and fulfillment evidence.</p></article>
+        </div>
+        <div class="evidence-rail"><span>EVIDENCE PLANE</span><div><i></i>Identity</div><div><i></i>Mandate</div><div><i></i>Decision</div><div><i></i>Payment</div><div><i></i>Order</div><div><i></i>Fulfillment</div></div>
+      </section>
+
+      <section class="public-section control-showcase" id="control-plane">
+        <div class="section-label">04 / SINGLE PANE OF GLASS</div>
+        <div class="showcase-head"><div><span class="eyebrow">ACG CONTROL PLANE</span><h2>Every decision and handoff.<br><em>One transaction trace.</em></h2></div><div><p>Operate agentic commerce across agents, AI gateways, mandates, merchants, policies, payments, transactions, alerts and compliance.</p><a href="https://agentic-commerce-control-plane.onrender.com/control-plane">Open the login-protected sandbox →</a></div></div>
+        <div class="dashboard-frame">
+          <aside class="dash-sidebar"><div class="dash-logo">AC</div><span>O <b>Overview</b></span><span>A <b>Agents</b></span><span>G <b>AI Gateways</b></span><span>M <b>Merchants</b></span><span>M <b>Mandates</b></span><span>P <b>Policies</b></span><span>C <b>Compliance</b></span><span class="selected">T <b>Transactions</b></span><span>A <b>Alerts</b></span></aside>
+          <div class="dash-main">
+            <div class="dash-top"><div><small>AGENTIC COMMERCE GATEWAY</small><strong>Transaction trace</strong></div><em>● SANDBOX</em></div>
+            <div class="dash-proof"><span>Identity <b>Bound</b></span><span>Mandate <b>Allow</b></span><span>Payment <b>Succeeded</b></span><span>Order <b>Accepted</b></span></div>
+            <div class="dash-trace"><div class="dash-trace-title"><span>END-TO-END EVIDENCE</span><strong>Live sandbox journey</strong></div><div>
+              <article><span class="dash-dot">1</span><p><small>CLIENT AGENT</small><strong>acg-sandbox-buyer</strong></p><em>✓ authenticated</em></article>
+              <article><span class="dash-dot">2</span><p><small>LITELLM</small><strong>Signed buyer identity assertion</strong></p><em>✓ passed</em></article>
+              <article><span class="dash-dot">3</span><p><small>ACG</small><strong>AP2 mandate + deterministic policy</strong></p><em>✓ allow</em></article>
+              <article><span class="dash-dot">4</span><p><small>STRIPE</small><strong>pi_•••95A7 · $1.00 test</strong></p><em>✓ succeeded</em></article>
+              <article><span class="dash-dot">5</span><p><small>TINKRA MERCHANT</small><strong>tinkra-test-•••32a2</strong></p><em>✓ accepted</em></article>
+              <article><span class="dash-dot">6</span><p><small>FULFILLMENT</small><strong>Signed merchant lifecycle event</strong></p><em>✓ pending</em></article>
+            </div></div>
+          </div>
+        </div>
+        <p class="disclosure">Live demo boundaries: Stripe test mode, an ACG-native durable Tinkra test-order backend and sandbox HMAC mandate fixtures. No real funds, physical fulfillment or production AP2 issuer trust are claimed.</p>
+      </section>
+
+      <section class="public-cta"><span class="eyebrow">THE COMMERCE LAYER FOR THE AGENT ERA</span><h2>Move from agent access<br>to accountable action.</h2><p>See the working sandbox trace across a client agent, LiteLLM, ACG, Stripe and Tinkra.</p><a class="button-primary" href="https://agentic-commerce-control-plane.onrender.com/control-plane">Explore the live control plane →</a></section>
+    </main>
+
+    <footer><a class="public-brand" href="#top"><span class="mark">AC</span><span><strong>Agentic Commerce Gateway</strong><small>BUILDING TRUST INTO EVERY AGENT TRANSACTION</small></span></a><p>Independent A2A intermediary · MCP commerce proxy · AP2 / MPP / x402 policy core</p><span>Sandbox prototype · 2026</span></footer>
+  </body>
+</html>
