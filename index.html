@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#071516">
-    <meta name="description" content="Agentic Commerce Gateway is the authorization, policy, and evidence layer for trusted agent payments.">
-    <meta property="og:title" content="Agentic Commerce Gateway">
-    <meta property="og:description" content="Let agents buy. Keep enterprises in control.">
+    <meta name="description" content="Authorize, control and govern B2B agentic commerce transactions with enterprise identity, mandates, policy enforcement and end-to-end evidence.">
+    <meta property="og:title" content="Authorize, Control and Govern B2B Agentic Commerce Transactions">
+    <meta property="og:description" content="Enterprise authorization, policy enforcement and end-to-end evidence for B2B agentic commerce.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pranavdharwadkar.github.io/agentic-commerce-control-point/">
     <link rel="canonical" href="https://pranavdharwadkar.github.io/agentic-commerce-control-point/">
     <link rel="stylesheet" href="./styles.css">
-    <title>Agentic Commerce Gateway</title>
+    <title>Authorize, Control and Govern B2B Agentic Commerce Transactions | Agentic Commerce Gateway</title>
   </head>
   <body>
     <nav class="public-nav">
@@ -24,7 +24,7 @@
         <div class="hero-grid"></div><div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
         <div class="public-hero-copy">
           <span class="public-kicker"><i></i> AGENTIC COMMERCE, CONTROLLED</span>
-          <h1>Let agents buy.<br><em>Keep enterprises in control.</em></h1>
+          <h1>Authorize, Control and<br><em>Govern B2B Agentic Commerce Transactions</em></h1>
           <p>Agentic Commerce Gateway is the independent authorization, policy and evidence layer between AI agents, gateways, merchants and payment processors.</p>
           <div class="hero-actions"><a class="button-primary" href="https://agentic-commerce-control-plane.onrender.com/control-plane">View the control plane →</a><a class="button-secondary" href="#architecture">See how it works ↓</a></div>
           <div class="protocol-line"><span>A2A</span><span>MCP</span><b>AP2</b><b>MPP</b><b>x402</b></div>
@@ -33,11 +33,10 @@
           <div class="proof-window">
             <div class="window-bar"><span>LIVE SANDBOX TRACE</span><i></i><i></i><i></i></div>
             <div class="mini-trace">
-              <div><span class="trace-node">1</span><p><small>CLIENT AGENT</small><strong>acg-sandbox-buyer</strong></p><em>✓ authenticated</em></div>
-              <div><span class="trace-node">2</span><p><small>LITELLM</small><strong>Signed buyer identity assertion</strong></p><em>✓ passed</em></div>
-              <div><span class="trace-node">3</span><p><small>ACG</small><strong>AP2 mandate + deterministic policy</strong></p><em>✓ allow</em></div>
-              <div><span class="trace-node">4</span><p><small>STRIPE</small><strong>pi_•••95A7 · $1.00 test</strong></p><em>✓ succeeded</em></div>
-              <div><span class="trace-node">5</span><p><small>TINKRA MERCHANT</small><strong>tinkra-test-•••32a2</strong></p><em>✓ accepted</em></div>
+              <div><span class="trace-node">1</span><p><small>CLIENT AGENT</small><strong>Enterprise agent</strong></p><em>✓ authenticated</em></div>
+              <div class="trace-acg"><span class="trace-node">2</span><div class="trace-acg-content"><small>AGENTIC COMMERCE GATEWAY</small><strong>Agentic Commerce Gateway</strong><div class="acg-capabilities"><span>Verified Buyer Identity <em>✓ verified</em></span><span>Authorized Intent and Payment Mandate <em>✓ authorized</em></span><span>Commerce-aware AI Gateway <em>A2A + AP2 + MPP + x402</em></span></div></div></div>
+              <div><span class="trace-node">3</span><p><small>PAYMENT</small><strong>Payment Gateway (e.g., Stripe)</strong></p><em>✓ succeeded · $1.00 test</em></div>
+              <div><span class="trace-node">4</span><p><small>COMMERCE</small><strong>Merchant</strong></p><em>✓ order accepted</em></div>
             </div>
           </div>
           <span class="hero-caption">One correlated record from agent identity to merchant order.</span>
@@ -64,7 +63,7 @@
           <p>ACG sits beside the AI gateway—not inside the merchant storefront. It validates agent identity and commerce mandates, applies deterministic enterprise policy, coordinates payment and order execution, and writes linked evidence for every decision.</p>
           <div class="solution-points"><div><b>01</b><span><strong>Verify</strong>Identity, issuer, delegation and mandate</span></div><div><b>02</b><span><strong>Enforce</strong>Merchant, amount, currency and route policy</span></div><div><b>03</b><span><strong>Trace</strong>Decision, payment, order and fulfillment</span></div></div>
         </div>
-        <div class="policy-card"><div class="policy-head"><span>POLICY DECISION</span><b>ALLOW</b></div><code><span>agent</span> acg-sandbox-buyer<br><span>merchant</span> tinkra-agent-atelier<br><span>protocol</span> AP2<br><span>amount</span> USD 1.00<br><span>mandate</span> signature verified<br><span>replay</span> no prior claim</code><div class="policy-foot"><i></i> Evidence linked end to end</div></div>
+        <div class="policy-card"><div class="policy-head"><span>POLICY DECISION</span><b>ALLOW</b></div><code><span>agent</span> Enterprise agent<br><span>merchant</span> tinkra-agent-atelier<br><span>protocol</span> AP2<br><span>amount</span> USD 1.00<br><span>mandate</span> signature verified<br><span>replay</span> no prior claim</code><div class="policy-foot"><i></i> Evidence linked end to end</div></div>
       </section>
 
       <section class="public-section architecture" id="architecture">
@@ -88,12 +87,10 @@
             <div class="dash-top"><div><small>AGENTIC COMMERCE GATEWAY</small><strong>Transaction trace</strong></div><em>● SANDBOX</em></div>
             <div class="dash-proof"><span>Identity <b>Bound</b></span><span>Mandate <b>Allow</b></span><span>Payment <b>Succeeded</b></span><span>Order <b>Accepted</b></span></div>
             <div class="dash-trace"><div class="dash-trace-title"><span>END-TO-END EVIDENCE</span><strong>Live sandbox journey</strong></div><div>
-              <article><span class="dash-dot">1</span><p><small>CLIENT AGENT</small><strong>acg-sandbox-buyer</strong></p><em>✓ authenticated</em></article>
-              <article><span class="dash-dot">2</span><p><small>LITELLM</small><strong>Signed buyer identity assertion</strong></p><em>✓ passed</em></article>
-              <article><span class="dash-dot">3</span><p><small>ACG</small><strong>AP2 mandate + deterministic policy</strong></p><em>✓ allow</em></article>
-              <article><span class="dash-dot">4</span><p><small>STRIPE</small><strong>pi_•••95A7 · $1.00 test</strong></p><em>✓ succeeded</em></article>
-              <article><span class="dash-dot">5</span><p><small>TINKRA MERCHANT</small><strong>tinkra-test-•••32a2</strong></p><em>✓ accepted</em></article>
-              <article><span class="dash-dot">6</span><p><small>FULFILLMENT</small><strong>Signed merchant lifecycle event</strong></p><em>✓ pending</em></article>
+              <article><span class="dash-dot">1</span><p><small>CLIENT AGENT</small><strong>Enterprise agent</strong></p><em>✓ authenticated</em></article>
+              <article class="dash-acg"><span class="dash-dot">2</span><div class="dash-acg-content"><small>AGENTIC COMMERCE GATEWAY</small><strong>Agentic Commerce Gateway</strong><div class="dash-acg-capabilities"><span><b>Verified Buyer Identity</b><em>✓ verified</em></span><span><b>Authorized Intent and Payment Mandate</b><em>✓ authorized</em></span><span><b>Commerce-aware AI Gateway</b><em>A2A + AP2 + MPP + x402</em></span></div></div></article>
+              <article><span class="dash-dot">3</span><p><small>PAYMENT</small><strong>Payment Gateway (e.g., Stripe)</strong></p><em>✓ succeeded · $1.00 test</em></article>
+              <article><span class="dash-dot">4</span><p><small>COMMERCE</small><strong>Merchant</strong></p><em>✓ order accepted</em></article>
             </div></div>
           </div>
         </div>
